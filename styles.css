@@ -414,13 +414,12 @@ ul {
 
 /* Widths */
 
-.about-me-img,
-.about-me-text,
 .error-text,
 .grid-image {
   width: 40%;
 }
 
+.about-me-img,
 .error-img,
 .footer-icon,
 .footer-main,
@@ -773,14 +772,17 @@ footer,
   width: 90%;
 }
 
+.about-img-container {
+  width: 35%;
+}
+
 .about-me-img {
-   height: auto;
   margin: 4% auto;
 }
 
 .about-me-text {
-  margin: 0 auto;
   padding: 5%;
+  width: 35%;
 }
 
 .about-heading {
@@ -863,6 +865,7 @@ footer,
     width: 80%;
   }
 
+  .about-img-container,
   .about-me,
   .about-me-text,
   .grid-image {
