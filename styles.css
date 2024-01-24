@@ -774,6 +774,7 @@ footer,
 }
 
 .about-me-img {
+   height: auto;
   margin: 4% auto;
 }
 
