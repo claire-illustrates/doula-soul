@@ -650,6 +650,7 @@ footer,
 
 .logo {
   border-radius: 10px;
+  height: auto;
 }
 
 .main-heading {
