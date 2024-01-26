@@ -650,7 +650,6 @@ footer,
 
 .logo {
   border-radius: 10px;
-  height: auto;
 }
 
 .main-heading {
@@ -907,6 +906,7 @@ footer,
   }
 
   .footer-logo {
+    height: auto;
     width: 20%;
   }
 
