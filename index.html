@@ -21,14 +21,59 @@
         ]
         </script>
 
+    <script>
+        window.addEventListener("scroll", reveal);
+        reveal();
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 300;
+            src: url('../fonts/merriweather-v30-latin-300.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 400;
+            src: url('../fonts/merriweather-v30-latin-regular.woff2') format('woff2');
+        }
+    </style>
+
     <link rel="stylesheet" href="styles.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@300;400;700&family=Poppins:wght@100;300;400&display=swap"
-        rel="stylesheet">
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -48,13 +93,14 @@
         </a>
 
         <a class="logo-container" href="#">
-            <img class="logo" src="images/doula-soul-logo.png" alt="Logo Doula Soul, go to the home page" width="1050" height="880" srcset="images/doula-soul-logo.png 1050w, images/doula-soul-logo-235.jpg 235w"
-            sizes="(min-width: 1000px) 7.75vw, (min-width: 700px) 13.93vw, (min-width: 340px) 23.53vw, calc(95vw - 233px)">
+            <img class="logo" src="images/doula-soul-logo.png" alt="Logo Doula Soul, go to the home page" width="1050"
+                height="880" srcset="images/doula-soul-logo.png 1050w, images/doula-soul-logo-235.jpg 235w"
+                sizes="(min-width: 1000px) calc(8vw - 4px), (min-width: 700px) 15vw, (min-width: 360px) 25vw, calc(100vw - 266px)">
         </a>
         <nav>
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
 
@@ -152,12 +198,23 @@
                 </ul>
             </div>
 
+            <div id="contact" class="contact">
+
+                <h2 class="contact-heading">Contact Emma</h2>
+                <p class="contact-body">If you would like more information, or would like to request a quote send us an
+                    email:</p>
+                <a class="email-link" href="mailto:doulasoulireland@gmail.com">doulasoulireland@gmail.com</a>
+
+            </div>
+
         </div>
 
         <div class="about-me">
 
             <div class="about-img-container">
-                <img class="about-me-img reveal" src="images/emma-larkin.png" alt="">
+                <img class="about-me-img reveal" src="images/emma-larkin.jpg" alt="" width="1151" height="2048"
+                    srcset="images/emma-larkin-1890.jpg 1890w, images/emma-larkin-1790.jpg 1790w, images/emma-larkin-1680.jpg 1680w, images/emma-larkin-1570.jpg 1570w, images/emma-larkin-1440.jpg 1440w, images/emma-larkin-1300.jpg 1300w, images/emma-larkin.jpg 1151w, images/emma-larkin-950.jpg 950w, images/emma-larkin-700.jpg 700w, images/emma-larkin-256.jpg 256w"
+                    sizes="(min-width: 1000px) 31.5vw, 57.79vw">
             </div>
 
             <div class="about-me-text reveal">
@@ -188,8 +245,9 @@
     <footer class="footer">
 
         <div class="footer-main">
-            <img class="footer-logo" src="images/doula-soul-logo.png" width="1050" height="880" alt="" srcset="images/doula-soul-logo.png 1050w, images/doula-soul-logo-580.jpg 580w, images/doula-soul-logo-256.jpg 256w"
-            sizes="(min-width: 1000px) 9.6vw, (min-width: 700px) 18.21vw, 22.89vw">
+            <img class="footer-logo" src="images/doula-soul-logo.png" width="1050" height="880" alt=""
+                srcset="images/doula-soul-logo.png 1050w, images/doula-soul-logo-580.jpg 580w, images/doula-soul-logo-256.jpg 256w"
+                sizes="(min-width: 1000px) 9.6vw, (min-width: 700px) 18.21vw, 22.89vw">
 
             <ul class="footer-icons">
                 <!-- Instagram -->
@@ -215,8 +273,7 @@
 
     </footer>
 
+    <script src="index.js" defer></script>
 </body>
-
-<script src="index.js"></script>
 
 </html>
